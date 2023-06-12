@@ -1,0 +1,30 @@
+/* css rule set for a radial background*/
+body {
+  background: linear-gradient(90deg, blue, yellow, blue);
+}
+
+.degreesToggle {
+  display: inline-block;
+  width: 50px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.degreesToggle span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 16px;
+}
+
+.degreesToggle:hover {
+  background-color: #aaa;
+}
+
+.degreesToggle:checked {
+  background-color: #fff;
+  color: #000;
+}
