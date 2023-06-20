@@ -1,17 +1,22 @@
 
+//Access toggle switch HTML element
+var themeSwitcher = document.querySelector("#theme-switcher");
+var unit = document.querySelector(".unit");
 
+// Set default mode to dark
+var mode = "F";
 
-const toggleButton = document.querySelector('degreesToggle');
-
-const toggleButtonState = {
-  isActive: false,
-  temperatureUnit: 'F',
-};
-
-toggleButton.addEventListener('click', () => {
-  toggleButtonState.isActive = !toggleButtonState.isActive;
-  toggleButtonState.temperatureUnit = toggleButtonState.isActive ? 'C' : 'F';
-
-  toggleButton.classList.toggle('active', toggleButtonState.isActive);
-  document.querySelector(`.toggle-button span.${toggleButtonState.temperatureUnit}`).classList.add('active');
+// Listen for a click event on toggle switch
+themeSwitcher.addEventListener("click", function() {
+  // If mode is dark, apply light background
+  if (mode === "F") {
+    mode = "C";
+    unit.setAttribute("class", "light");
+  }
+  // If mode is light, apply dark background 
+  else {
+    mode = "F";
+    unit.setAttribute("class", "dark");
+  }
 });
+

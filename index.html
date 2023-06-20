@@ -15,11 +15,18 @@
     <input type="search" name="locationSearchInput" id="locationSearchInput">
     <label for="saveLocationButton"></label>
     <input type="button" value="save location" id="saveLocationButton">
-    <label for="degreesToggle">Toggle Degrees</label>
-    <button class="degreesToggle">
-        <span class=>F</span>
-        <span class=>C</span>
-    </button>
+    <div class="row toggle">
+        <div>
+            <p class="unit">degrees F</p>
+        </div>
+        <label for="theme-switcher" class="switch col">
+            <input id="theme-switcher" type="checkbox">            
+            <span class="slider round"></span>
+        </label>
+        <div>
+            <p class="unit">degrees C</p>
+        </div>
+    </div>
 
 </header>
 <body>
