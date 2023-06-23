@@ -13,25 +13,37 @@
     <h1>WEATHER you like it ...</h1>
     <label for="locationSearchInput">Search Location</label>
     <input type="search" name="locationSearchInput" id="locationSearchInput">
-    <label for="saveLocationButton"></label>
-    <input type="button" value="save location" id="saveLocationButton">
-    <div class="row toggle">
-        <div>
-            <p class="unit">degrees F</p>
-        </div>
-        <label for="theme-switcher" class="switch col">
-            <input id="theme-switcher" type="checkbox">            
-            <span class="slider round"></span>
-        </label>
-        <div>
-            <p class="unit">degrees C</p>
-        </div>
-    </div>
-
+    <label for="searchSubmit"></label>
+    <button id="searchSubmit">Submit</button>
+    
 </header>
 <body>
     <main>
+        <div class="row toggle">
+            <div>
+                <p class="unit">degrees F</p>
+            </div>
+            <label for="theme-switcher" class="switch col">
+                <input id="theme-switcher" type="checkbox">            
+                <span class="slider round"></span>
+            </label>
+            <div>
+                <p class="unit">degrees C</p>
+            </div>
+        </div>
+        <div>
+            <h2>Current Location</h2>
+            <div>
+                <label for="saveLocationButton"></label>
+                <input type="button" value="save location" id="saveLocationButton">
+            </div>
+        </div>
+        <div id="savedLocContainer">
+            <h3>Saved Locations</h3>
+            <div id="savedLocParent">
 
+            </div>
+        </div>
     </main>    
 </body>
 </html>
