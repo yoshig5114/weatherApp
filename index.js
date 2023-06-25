@@ -22,7 +22,7 @@ var saveLocation = document.querySelector("#saveLocationButton");
 //   var location = searchInput.value;
 // })
 
-const apiKey = "3c42ee32d7e58fdf6e213e4e64ca4a86";
+const apiKey = "";
 
 // function displayWeather(fetchedData) {
 //   var location = fetchedData.name;
@@ -52,9 +52,9 @@ searchSubmit.addEventListener("click", function (event) {
   event.preventDefault();
   var location = searchInput.value;
   if (mode === "F") {
-    var url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=${apiKey}`;
+    var url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=${apiKey}, { mode: "cors" }`
   } else {
-    var url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${apiKey}`;
+    var url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${apiKey}, { mode: "cors" }`;
   }
   fetch(url)
     .then((response) => {
@@ -69,6 +69,6 @@ searchSubmit.addEventListener("click", function (event) {
     })
     .catch((error) => {
       console.log(error);
-      feedBackPar.textContent = "Error: " + error;
+      //feedBackPar.textContent = "Error: " + error;
     });
 });
