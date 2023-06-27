@@ -33,6 +33,25 @@
         </div>
         <div>
             <h2>Current Location</h2>
+            
+            <ul>
+                <li>
+                    <span id="location">location name:</span>
+                    <img
+                      id="image"
+                      src="#"
+                      alt="Giphy Selection"
+                      style="width: 50%; height: auto; float: right;"
+                    />
+                </li>
+                <li id="temp">temp: </li>
+                <li id="feelsLike">feels like: </li>
+                <li id="humidity">humidity: </li>
+                <li id="windSpeed">wind speed: </li>
+                <li id="description">weather: </li>
+               
+            </ul>
+
             <div>
                 <label for="saveLocationButton"></label>
                 <input type="button" value="save location" id="saveLocationButton">
@@ -40,9 +59,9 @@
         </div>
         <div id="savedLocContainer">
             <h3>Saved Locations</h3>
-            <div id="savedLocParent">
+            <ul id="savedLocParent">
 
-            </div>
+            </ul>
         </div>
     </main>    
 </body>
